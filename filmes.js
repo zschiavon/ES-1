@@ -20,6 +20,27 @@ function incluir() {
 
 }
 
+function listar() {
+    titulo("- Lista de Filmes -")
+    for (var i = 0; i < filme.length; i++) {
+        console.log(`${filme[i].padEnd(20)} - ${duracao[i]}min - ${genero[i]}`)
+    }
+}
+
+function pesqGen() {
+    titulo("- Pesquisa por Gênero -")
+    var pesq = prompt("Gênero a pesquisar: ")
+    var existe = 0
+    for (var i = 0; i < genero.length; i++) {
+        if (pesq == genero[i]) {
+            console.log(`Foi encontrado: ${filme[i]}`)
+            existe = 1
+        }
+    }
+    if(existe == 0 ) {
+        console.log("Não foi encontrado nenhum filme deste gênero...")
+    
+    }
 
 do {
     titulo("- Menu Principal -")
