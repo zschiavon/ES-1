@@ -1,5 +1,26 @@
 var prompt = require("prompt-sync")()
 
+var filme = []
+var duracao = []
+var genero = []
+
+function titulo(texto) {
+    console.log()
+    console.log(texto)
+    console.log("-".repeat(40))
+}
+
+function incluir() {
+    titulo("- Inclusão de Filmes -")
+
+    filme.push(prompt("Título do Filme: "))
+    duracao.push(Number(prompt("Duração do Filme(min): ")))
+    genero.push(prompt("Gênero do Filme: "))
+
+
+}
+
+
 do {
     titulo("- Menu Principal -")
     console.log("1. Incluir Filmes")
