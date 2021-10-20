@@ -41,6 +41,39 @@ function pesqGen() {
         console.log("Não foi encontrado nenhum filme deste gênero...")
     
     }
+    
+    function pesqDura() {
+        titulo("- Pesquisa por Duração -")
+        var pesqd = Number(prompt("Duração: "))
+        var existe = 0
+        for (var i = 0; i < duracao.length; i++) {
+            if (pesqd == duracao[i]) {
+                console.log(`Encontrado: ${filme[i]}`)
+                existe = 1
+            }
+        }
+        if (existe == 0){
+            console.log("Não foi encontrado nenhum filme com esta duração...")
+        }
+    }
+    
+    
+    function media() {
+        titulo("- Média de duração dos Filmes -")
+       
+        var total = 0
+        var num = filmes.length
+       
+        for (var i=0; i<num; i++) {
+        total = total + duracoes[i]
+        }
+        var media = total / num
+        console.log(`Duração Média dos Filmes: ${media.toFixed(1)}`)
+        
+    
+        
+    
+    }
 
 do {
     titulo("- Menu Principal -")
